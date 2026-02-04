@@ -100,33 +100,38 @@ def build_model_pipeline(classifier_name='random_forest'):
     # Define classifiers with regularization to prevent overfitting
     classifiers = {
         'random_forest': RandomForestClassifier(
-            n_estimators=100, 
-            max_depth=8,  # Reduced from 10
-            min_samples_split=5,  # Added regularization
-            min_samples_leaf=2,   # Added regularization
+            n_estimators=200,     # Increased from 100 for better prediction
+            max_depth=10,         # Slightly deeper trees
+            min_samples_split=4,  # Regularization
+            min_samples_leaf=2,   # Regularization
+            max_features='sqrt',  # Use sqrt of features per split
             random_state=42,
-            class_weight='balanced'
+            class_weight='balanced',
+            n_jobs=-1             # Use all CPU cores
         ),
         'gradient_boosting': GradientBoostingClassifier(
-            n_estimators=100, 
-            max_depth=4,  # Reduced from 5
-            min_samples_split=5,  # Added regularization
-            min_samples_leaf=2,   # Added regularization
-            learning_rate=0.1,    # Moderate learning rate
-            subsample=0.8,        # Use 80% of samples per tree
+            n_estimators=200,     # Increased from 100 for better prediction
+            max_depth=5,          # Moderate depth
+            min_samples_split=4,  # Regularization
+            min_samples_leaf=2,   # Regularization
+            learning_rate=0.05,   # Lower learning rate with more estimators
+            subsample=0.8,        # Use 80% of samples per tree (prevents overfitting)
+            validation_fraction=0.1,  # Use 10% for early stopping validation
+            n_iter_no_change=10,  # Early stopping after 10 iterations with no improvement
             random_state=42
         ),
         'svm': SVC(
             kernel='rbf', 
-            C=0.5,  # Reduced from 1.0 for more regularization
+            C=1.0,                # Balanced regularization
             gamma='scale',
             random_state=42,
             class_weight='balanced',
-            probability=True  # Enable probability estimates
+            probability=True      # Enable probability estimates
         ),
         'logistic_regression': LogisticRegression(
-            max_iter=1000, 
-            C=0.5,  # Reduced from default 1.0 for more regularization
+            max_iter=2000,        # Increased from 1000 for convergence
+            C=1.0,                # Balanced regularization
+            solver='lbfgs',       # Good solver for multiclass
             random_state=42,
             class_weight='balanced'
         )
@@ -373,6 +378,228 @@ def analyze_feature_importance(model_output, df):
         return None
 
 # =============================================================================
+# 5.1 OVERFITTING/UNDERFITTING DETECTION & REPORT
+# =============================================================================
+
+def check_model_fit_status(model_output, X_train, y_train):
+    """
+    Check if the model is underfitted, overfitted, or well-fitted.
+    Generate a comprehensive report.
+    """
+    from datetime import datetime
+    
+    print("\n" + "=" * 60)
+    print("MODEL FIT STATUS ANALYSIS")
+    print("=" * 60)
+    
+    results = model_output['results']
+    best_model_name = model_output['best_model'][0]
+    best_model_pipeline = model_output['best_model'][1]
+    
+    # Get training accuracy for best model
+    y_train_pred = best_model_pipeline.predict(X_train)
+    train_accuracy = accuracy_score(y_train, y_train_pred)
+    
+    # Get CV and test accuracy
+    cv_accuracy = results[best_model_name]['cv_mean']
+    test_accuracy = results[best_model_name]['test_accuracy']
+    cv_std = results[best_model_name]['cv_std']
+    
+    print(f"\n{best_model_name} Performance Metrics:")
+    print(f"  Training Accuracy:    {train_accuracy:.4f} ({train_accuracy*100:.2f}%)")
+    print(f"  CV Accuracy:          {cv_accuracy:.4f} (+/- {cv_std:.4f})")
+    print(f"  Test Accuracy:        {test_accuracy:.4f} ({test_accuracy*100:.2f}%)")
+    
+    # Calculate gaps
+    train_cv_gap = train_accuracy - cv_accuracy
+    train_test_gap = train_accuracy - test_accuracy
+    cv_test_gap = abs(cv_accuracy - test_accuracy)
+    
+    print(f"\nAccuracy Gaps:")
+    print(f"  Train - CV Gap:       {train_cv_gap:.4f}")
+    print(f"  Train - Test Gap:     {train_test_gap:.4f}")
+    print(f"  CV - Test Gap:        {cv_test_gap:.4f}")
+    
+    # Determine fit status
+    fit_status = "WELL-FITTED"
+    fit_details = []
+    
+    # Check for underfitting (low accuracy across the board)
+    if train_accuracy < 0.85:
+        fit_status = "UNDERFITTED"
+        fit_details.append("Training accuracy is below 85%")
+    if cv_accuracy < 0.85:
+        fit_status = "UNDERFITTED"
+        fit_details.append("Cross-validation accuracy is below 85%")
+    if test_accuracy < 0.85:
+        fit_status = "UNDERFITTED"
+        fit_details.append("Test accuracy is below 85%")
+    
+    # Check for overfitting (high train, low test/cv)
+    if train_cv_gap > 0.05:  # >5% gap
+        fit_status = "OVERFITTED"
+        fit_details.append(f"Train-CV gap ({train_cv_gap:.2%}) exceeds 5% threshold")
+    if train_test_gap > 0.05:  # >5% gap
+        fit_status = "OVERFITTED"
+        fit_details.append(f"Train-Test gap ({train_test_gap:.2%}) exceeds 5% threshold")
+    
+    # Check for high variance (unstable model)
+    if cv_std > 0.03:  # >3% std in CV
+        fit_details.append(f"High CV variance ({cv_std:.4f}) indicates unstable model")
+    
+    # If no issues found, it's well-fitted
+    if not fit_details:
+        fit_details.append("Training, CV, and Test accuracies are consistent")
+        fit_details.append("No significant accuracy gaps detected")
+        fit_details.append("Model generalizes well to unseen data")
+    
+    print("\n" + "-" * 60)
+    print(f"FIT STATUS: {fit_status}")
+    print("-" * 60)
+    for detail in fit_details:
+        print(f"  • {detail}")
+    
+    # Recommendations
+    print("\n" + "-" * 60)
+    print("RECOMMENDATIONS:")
+    print("-" * 60)
+    
+    if fit_status == "UNDERFITTED":
+        print("  • Increase model complexity (more estimators, deeper trees)")
+        print("  • Add more features or feature engineering")
+        print("  • Reduce regularization parameters")
+        print("  • Try more complex algorithms")
+    elif fit_status == "OVERFITTED":
+        print("  • Reduce model complexity (fewer estimators, shallower trees)")
+        print("  • Increase regularization (lower C, higher min_samples)")
+        print("  • Use more training data")
+        print("  • Apply dropout or early stopping")
+    else:
+        print("  ✓ Model is well-fitted and ready for production")
+        print("  ✓ No changes recommended")
+    
+    # Generate detailed report
+    report = {
+        'model_name': best_model_name,
+        'fit_status': fit_status,
+        'train_accuracy': train_accuracy,
+        'cv_accuracy': cv_accuracy,
+        'cv_std': cv_std,
+        'test_accuracy': test_accuracy,
+        'train_cv_gap': train_cv_gap,
+        'train_test_gap': train_test_gap,
+        'cv_test_gap': cv_test_gap,
+        'details': fit_details,
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    }
+    
+    return report
+
+
+def generate_training_report(model_output, fit_report, df, importance_df=None):
+    """
+    Generate a comprehensive training report and save to file.
+    """
+    from datetime import datetime
+    import os
+    
+    print("\n" + "=" * 60)
+    print("GENERATING TRAINING REPORT")
+    print("=" * 60)
+    
+    results = model_output['results']
+    label_encoder = model_output['label_encoder']
+    
+    # Create reports directory
+    reports_dir = r"c:\Users\VH0000812\Desktop\Coverage\reports"
+    os.makedirs(reports_dir, exist_ok=True)
+    
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    report_path = os.path.join(reports_dir, f"training_report_{timestamp}.txt")
+    
+    with open(report_path, 'w') as f:
+        f.write("=" * 70 + "\n")
+        f.write("COVERAGE CLASSIFICATION MODEL - TRAINING REPORT\n")
+        f.write("=" * 70 + "\n")
+        f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        
+        # Data Summary
+        f.write("-" * 70 + "\n")
+        f.write("1. DATA SUMMARY\n")
+        f.write("-" * 70 + "\n")
+        f.write(f"Total Records: {len(df)}\n")
+        f.write(f"Features Used: {model_output['tfidf'].max_features} TF-IDF + {len(model_output['onehot'].get_feature_names_out())} Categorical\n")
+        f.write("\nClass Distribution:\n")
+        for cls in label_encoder.classes_:
+            count = (df['Coverage Status'] == cls).sum()
+            pct = count / len(df) * 100
+            f.write(f"  {cls}: {count} ({pct:.1f}%)\n")
+        
+        # Model Comparison
+        f.write("\n" + "-" * 70 + "\n")
+        f.write("2. MODEL COMPARISON\n")
+        f.write("-" * 70 + "\n")
+        f.write(f"{'Model':<25} {'CV Accuracy':<15} {'Test Accuracy':<15} {'Time (s)':<10}\n")
+        f.write("-" * 70 + "\n")
+        for name, res in results.items():
+            f.write(f"{name:<25} {res['cv_mean']:.4f} (+/-{res['cv_std']:.4f})  {res['test_accuracy']:.4f}         {res['total_time']:.2f}\n")
+        
+        # Best Model Details
+        f.write("\n" + "-" * 70 + "\n")
+        f.write("3. BEST MODEL DETAILS\n")
+        f.write("-" * 70 + "\n")
+        f.write(f"Selected Model: {fit_report['model_name']}\n")
+        f.write(f"Training Accuracy: {fit_report['train_accuracy']:.4f} ({fit_report['train_accuracy']*100:.2f}%)\n")
+        f.write(f"CV Accuracy: {fit_report['cv_accuracy']:.4f} (+/- {fit_report['cv_std']:.4f})\n")
+        f.write(f"Test Accuracy: {fit_report['test_accuracy']:.4f} ({fit_report['test_accuracy']*100:.2f}%)\n")
+        
+        # Fit Status
+        f.write("\n" + "-" * 70 + "\n")
+        f.write("4. FIT STATUS ANALYSIS\n")
+        f.write("-" * 70 + "\n")
+        f.write(f"Status: {fit_report['fit_status']}\n\n")
+        f.write("Accuracy Gaps:\n")
+        f.write(f"  Train - CV Gap:   {fit_report['train_cv_gap']:.4f}\n")
+        f.write(f"  Train - Test Gap: {fit_report['train_test_gap']:.4f}\n")
+        f.write(f"  CV - Test Gap:    {fit_report['cv_test_gap']:.4f}\n")
+        f.write("\nAnalysis:\n")
+        for detail in fit_report['details']:
+            f.write(f"  • {detail}\n")
+        
+        # Feature Importance
+        if importance_df is not None:
+            f.write("\n" + "-" * 70 + "\n")
+            f.write("5. TOP 20 IMPORTANT FEATURES\n")
+            f.write("-" * 70 + "\n")
+            for i, row in importance_df.head(20).iterrows():
+                f.write(f"  {row['feature']:<30} {row['importance']:.6f}\n")
+        
+        # Classification Report
+        f.write("\n" + "-" * 70 + "\n")
+        f.write("6. CLASSIFICATION REPORT\n")
+        f.write("-" * 70 + "\n")
+        y_test = model_output['y_test']
+        y_pred = model_output['best_model'][1].predict(model_output['X_test'])
+        unique_labels = np.unique(np.concatenate([y_test, y_pred]))
+        target_names = [label_encoder.classes_[i] for i in unique_labels]
+        f.write(classification_report(y_test, y_pred, labels=unique_labels, target_names=target_names))
+        
+        # Confusion Matrix
+        f.write("\n" + "-" * 70 + "\n")
+        f.write("7. CONFUSION MATRIX\n")
+        f.write("-" * 70 + "\n")
+        cm = confusion_matrix(y_test, y_pred, labels=unique_labels)
+        cm_df = pd.DataFrame(cm, index=target_names, columns=target_names)
+        f.write(cm_df.to_string() + "\n")
+        
+        f.write("\n" + "=" * 70 + "\n")
+        f.write("END OF REPORT\n")
+        f.write("=" * 70 + "\n")
+    
+    print(f"\nReport saved to: {report_path}")
+    return report_path
+
+# =============================================================================
 # 6. PREDICTION FUNCTION
 # =============================================================================
 
@@ -438,8 +665,8 @@ def predict_coverage_status(model_output, payer_name, state_name, acronym, expan
 if __name__ == "__main__":
     import os
     
-    # Load cleaned data (rows with null Coverage Status removed)
-    DATA_PATH = r"c:\Users\VH0000812\Desktop\Coverage\data\Acronym_cleaned.csv"
+    # Load cleaned data (rows with null Coverage Status removed) - Updated for 2026 data
+    DATA_PATH = r"c:\Users\VH0000812\Desktop\Coverage\data\Acronym_2026_cleaned.csv"
     
     df = load_and_explore_data(DATA_PATH)
     
@@ -448,6 +675,32 @@ if __name__ == "__main__":
     
     # Analyze feature importance
     importance_df = analyze_feature_importance(model_output, df)
+    
+    # Prepare training data for fit check
+    data = prepare_features(df)
+    X_text = data['combined_text']
+    X_categorical = data[['PAYER NAME', 'STATE NAME', 'ACRONYM_clean']]
+    y = data['Coverage Status']
+    
+    label_encoder = model_output['label_encoder']
+    y_encoded = label_encoder.transform(y)
+    
+    X_text_tfidf = model_output['tfidf'].transform(X_text).toarray()
+    X_cat_encoded = model_output['onehot'].transform(X_categorical)
+    X_combined = np.hstack([X_text_tfidf, X_cat_encoded])
+    
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_combined, y_encoded, 
+        test_size=0.2, 
+        random_state=42, 
+        stratify=y_encoded
+    )
+    
+    # Check model fit status (underfitting/overfitting)
+    fit_report = check_model_fit_status(model_output, X_train, y_train)
+    
+    # Generate comprehensive training report
+    report_path = generate_training_report(model_output, fit_report, df, importance_df)
     
     # Example prediction
     print("\n" + "=" * 60)
@@ -489,6 +742,7 @@ if __name__ == "__main__":
         'label_encoder': model_output['label_encoder'],
         'tfidf': model_output['tfidf'],
         'onehot': model_output['onehot'],
+        'fit_report': fit_report,
         'metrics': {
             'model_name': best_model_name,
             'test_accuracy': best_model_results['test_accuracy'],

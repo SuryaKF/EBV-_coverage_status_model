@@ -68,12 +68,12 @@ saved_model = joblib.load(r"c:\Users\VH0000812\Desktop\Coverage\models\coverage_
 # Make a prediction
 result = predict_coverage_status(
     saved_model,
-    payer_name="Humana",
-    state_name="Wyoming", 
-    acronym="PDS - BD/HTL",
-    expansion="Droplet are the Preffered Diabetic Supplies",
-    explanation="Preferred Diabetic Supplies,Droplet are the preferred diabetic syringe and pen needle brands for the plan")
-
+    payer_name="cook childrens health plan",
+    state_name="Texas",
+    acronym="VM",
+    expansion="Vitamins and Minerals",
+    explanation="A formulary category that includes products containing essential vitamins and minerals. It outlines coverage and guidelines for nutritional supplements used to prevent or treat deficiencies.")
+ 
 # Output as formatted JSON
 print(json.dumps(result, indent=2))
 
