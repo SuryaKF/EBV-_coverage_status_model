@@ -666,7 +666,7 @@ if __name__ == "__main__":
     import os
     
     # Load cleaned data (rows with null Coverage Status removed) - Updated for 2026 data
-    DATA_PATH = r"c:\Users\VH0000812\Desktop\Coverage\data\Acronym_2026_cleaned.csv"
+    DATA_PATH = r"data\January_Acronym_2026_cleaned.csv"
     
     df = load_and_explore_data(DATA_PATH)
     

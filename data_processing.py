@@ -109,14 +109,11 @@ def clean_coverage_data(input_path, output_path=None):
     print("=" * 60)
     print("DATA PREPROCESSING COMPLETED")
     print("=" * 60)
-    
-    return df_cleaned
-
 
 if __name__ == "__main__":
     # Input and output file paths - Updated for 2026 data
-    input_file = r"c:\Users\VH0000812\Desktop\Coverage\data\Acronym 2026(Acronym).csv"
-    output_file = r"c:\Users\VH0000812\Desktop\Coverage\data\Acronym_2026_cleaned.csv"
+    input_file = r"C:\Users\VH0000812\Desktop\Coverage\data\January_Acronym 2026_Copy(Consolidate).csv"
+    output_file = r"C:\Users\VH0000812\Desktop\Coverage\data\January_Acronym_2026_cleaned.csv"
     
     # Clean the data
     cleaned_df = clean_coverage_data(input_file, output_file)

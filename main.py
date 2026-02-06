@@ -70,10 +70,9 @@ result = predict_coverage_status(
     saved_model,
     payer_name="cook childrens health plan",
     state_name="Texas",
-    acronym="VM",
-    expansion="Vitamins and Minerals",
-    explanation="A formulary category that includes products containing essential vitamins and minerals. It outlines coverage and guidelines for nutritional supplements used to prevent or treat deficiencies.")
- 
+    acronym="NPD",
+    expansion="Non-preferred drug.",
+    explanation="Refers to brand-name drugs on a formulary that are not in the preferred tier, usually resulting in higher copayments or coinsurance compared to preferred brand-name drugs.")
 # Output as formatted JSON
 print(json.dumps(result, indent=2))
 
