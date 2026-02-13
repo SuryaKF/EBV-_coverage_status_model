@@ -63,10 +63,20 @@ def clean_coverage_data(input_path, output_path=None):
     coverage_null_count = df['Coverage Status'].isnull().sum()
     print(f"Null values in 'Coverage Status' column: {coverage_null_count}")
     
-    df_cleaned = df.dropna(subset=['Coverage Status'])
+    df_cleaned = df.dropna(subset=['Coverage Status']).copy()
     
-    # Normalize Coverage Status - strip whitespace
+    # Normalize Coverage Status - strip whitespace and standardize case
     df_cleaned['Coverage Status'] = df_cleaned['Coverage Status'].str.strip()
+    
+    # Standardize case variations to canonical form
+    case_mapping = {
+        'covered': 'Covered',
+        'covered with condition': 'Covered with Condition',
+        'not covered': 'Not Covered'
+    }
+    df_cleaned['Coverage Status'] = df_cleaned['Coverage Status'].str.lower().map(
+        lambda x: case_mapping.get(x, x.title() if x else x)
+    )
     
     # Define valid Coverage Status values
     valid_statuses = ['Covered', 'Covered with Condition', 'Not Covered']
@@ -112,8 +122,8 @@ def clean_coverage_data(input_path, output_path=None):
 
 if __name__ == "__main__":
     # Input and output file paths - Updated for 2026 data
-    input_file = r"C:\Users\VH0000812\Desktop\Coverage\data\January_Acronym 2026_Copy(Consolidate).csv"
-    output_file = r"C:\Users\VH0000812\Desktop\Coverage\data\January_Acronym_2026_cleaned.csv"
+    input_file = r"data\January_Acronym_2026(Consolidate).csv"
+    output_file = r"data\Cleaned Output\Cleaned_January_Acronym_2026.csv"
     
     # Clean the data
     cleaned_df = clean_coverage_data(input_file, output_file)
