@@ -20,6 +20,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import warnings
 warnings.filterwarnings('ignore')
+# Import joblib for model saving
+import joblib
 
 # =============================================================================
 # 1. LOAD AND EXPLORE DATA
@@ -666,47 +668,47 @@ if __name__ == "__main__":
     import os
     
     # Load cleaned data (rows with null Coverage Status removed) - Updated for 2026 data
-    DATA_PATH = r"data\Cleaned Output\Cleaned_January_Acronym_2026.csv"
-    
+    DATA_PATH = r"data\Cleaned Output\Cleaned_January_Acronym_2026_augmented.csv"
+
     df = load_and_explore_data(DATA_PATH)
-    
+
     # Train and evaluate models
     model_output = train_and_evaluate(df)
-    
+
     # Analyze feature importance
     importance_df = analyze_feature_importance(model_output, df)
-    
+
     # Prepare training data for fit check
     data = prepare_features(df)
     X_text = data['combined_text']
     X_categorical = data[['PAYER NAME', 'STATE NAME', 'ACRONYM_clean']]
     y = data['Coverage Status']
-    
+
     label_encoder = model_output['label_encoder']
     y_encoded = label_encoder.transform(y)
-    
+
     X_text_tfidf = model_output['tfidf'].transform(X_text).toarray()
     X_cat_encoded = model_output['onehot'].transform(X_categorical)
     X_combined = np.hstack([X_text_tfidf, X_cat_encoded])
-    
+
     X_train, X_test, y_train, y_test = train_test_split(
         X_combined, y_encoded, 
         test_size=0.2, 
         random_state=42, 
         stratify=y_encoded
     )
-    
+
     # Check model fit status (underfitting/overfitting)
     fit_report = check_model_fit_status(model_output, X_train, y_train)
-    
+
     # Generate comprehensive training report
     report_path = generate_training_report(model_output, fit_report, df, importance_df)
-    
+
     # Example prediction
     print("\n" + "=" * 60)
     print("EXAMPLE PREDICTION")
     print("=" * 60)
-    
+
     test_prediction = predict_coverage_status(
         model_output,
         payer_name="Aetna",
@@ -716,27 +718,29 @@ if __name__ == "__main__":
         explanation="You need to get approval from the plan before filling prescription."
     )
     print(f"\nPredicted Coverage Status: {test_prediction}")
-    
+
     # Save the model to models directory
-    import joblib
-    
+    # ...existing code...
+
+   
+
     # Create models directory if it doesn't exist
     models_dir = r"c:\Users\VH0000812\Desktop\Coverage\models"
     os.makedirs(models_dir, exist_ok=True)
-    
+
     model_path = os.path.join(models_dir, "coverage_model.pkl")
-    
+
     # Get best model metrics
     best_model_name = model_output['best_model'][0]
     best_model_pipeline = model_output['best_model'][1]
     best_model_results = model_output['results'][best_model_name]
-    
+
     # Extract the classifier from the pipeline for saving
     if hasattr(best_model_pipeline, 'named_steps'):
         classifier = best_model_pipeline.named_steps['classifier']
     else:
         classifier = best_model_pipeline
-    
+
     joblib.dump({
         'model': classifier,
         'label_encoder': model_output['label_encoder'],

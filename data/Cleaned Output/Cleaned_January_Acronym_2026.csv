@@ -1139,7 +1139,8 @@ AllCare Health Plan Oregon,Oregon,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 AllCare Health Plan Oregon,Oregon,AGE,Age Requirement,"AGE (Age Requirement) refers to the minimum or maximum age limits set by insurance policies or healthcare plans that determine eligibility for coverage or specific benefits, ensuring treatment or coverage is appropriate for the patient’s age group.",Covered with Condition
 AllCare Health Plan Oregon,Oregon,PA-NSO,Prior Authorization Restriction for New Starts Only ,Prior authorization applies only for new users or members; it does not apply for those already receiving the drug.,Covered with Condition
 AllCare Health Plan Oregon,Oregon,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
@@ -1972,7 +1973,8 @@ Astiva Health,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Astiva Health,California,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
 Astiva Health,California,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
 Atrio Health Plans,Oregon,LA,Limited Access,"Drugs are considered “limited access” if the FDA says the drug can only be given out by certain facilities, doctors or prescribers. These drugs may require extra handling, provider coordination or patient education that can’t be done at a network pharmacy.",Covered with Condition
@@ -3028,7 +3030,8 @@ CenCal          ,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 CenCal          ,California,NDS,Non-extended day supply medication. ,This drug is only available for a one-month supply.,Covered with Condition
 CenCal          ,California,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
 CenCal          ,California,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
@@ -3527,7 +3530,8 @@ Central California Alliance for Health,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Central California Alliance for Health,California, PA NSO-HRM,Prior Authorization (New Starts Only – High Risk Meds) ,"If you are a new member, you (or your 
 physician) are required to get a prior authorization before you fill your prescription for this drug. This drug has been deemed by CMS to be potentially harmful and therefore a High-Risk Medication for Medicare beneficiaries 65 years or older. Without prior authorization, this drug may not be covered",Covered with Condition
 Central California Alliance for Health,California,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
@@ -3845,7 +3849,8 @@ Community Health Group        ,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Community Health Group        ,California, PA NSO-HRM,Prior Authorization (New Starts Only – High Risk Meds) ,"If you are a new member, you (or your 
 physician) are required to get a prior authorization before you fill your prescription for this drug. This drug has been deemed by CMS to be potentially harmful and therefore a High-Risk Medication for Medicare beneficiaries 65 years or older. Without prior authorization, this drug may not be covered",Covered with Condition
 Community Health Group        ,California,AGE,Age Requirement,"AGE (Age Requirement) refers to the minimum or maximum age limits set by insurance policies or healthcare plans that determine eligibility for coverage or specific benefits, ensuring treatment or coverage is appropriate for the patient’s age group.",Covered with Condition
@@ -5128,7 +5133,8 @@ BvD",Prior Authorization Restriction for Part B vs Part D Determination,"This dr
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Health Plan of San Mateo      ,California,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 Health Plan of San Mateo      ,California,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
 Health Plan of San Mateo      ,California,EXD-PARTD ,Part D Excluded Drug ,medications are not covered by Part D plans despite their medical use.,Not Covered
@@ -6552,7 +6558,8 @@ Imperial Health Plan,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Imperial Health Plan,California, PA NSO-HRM,Prior Authorization (New Starts Only – High Risk Meds) ,"If you are a new member, you (or your 
 physician) are required to get a prior authorization before you fill your prescription for this drug. This drug has been deemed by CMS to be potentially harmful and therefore a High-Risk Medication for Medicare beneficiaries 65 years or older. Without prior authorization, this drug may not be covered",Covered with Condition
 ‍Independent Health,New York,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -6971,7 +6978,8 @@ Kern Family Health Care,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Kern Family Health Care,California, PA NSO-HRM,Prior Authorization (New Starts Only – High Risk Meds) ,"If you are a new member, you (or your 
 physician) are required to get a prior authorization before you fill your prescription for this drug. This drug has been deemed by CMS to be potentially harmful and therefore a High-Risk Medication for Medicare beneficiaries 65 years or older. Without prior authorization, this drug may not be covered",Covered with Condition
 Kern Family Health Care,California,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
@@ -7135,7 +7143,8 @@ McLaren Health Plan,Michigan,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 McLaren Health Plan,Michigan,PA-NSO,Prior Authorization Restriction for New Starts Only ,Prior authorization applies only for new users or members; it does not apply for those already receiving the drug.,Covered with Condition
 McLaren Health Plan,Michigan,NDS,Non-extended day supply medication. ,This drug is only available for a one-month supply.,Covered with Condition
 McLaren Health Plan,Michigan,HI,Home infusion,This prescription drug may be covered under our medical benefit.,Covered with Condition
@@ -9025,7 +9034,8 @@ BvD",Prior Authorization Medicare part B and D,"This drug may be eligible for pa
 San Francisco Health Plan,California,"PA 
 HRM","High Risk medication - prior 
 authorization.","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 San Francisco Health Plan,California,AGE,Age Requirement,"AGE (Age Requirement) refers to the minimum or maximum age limits set by insurance policies or healthcare plans that determine eligibility for coverage or specific benefits, ensuring treatment or coverage is appropriate for the patient’s age group.",Covered with Condition
 San Francisco Health Plan,California,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
 San Francisco Health Plan,California,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
@@ -9177,7 +9187,8 @@ Santa Clara Family Health Plan      ,California,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 Santa Clara Family Health Plan      ,California,PA-NSO,Prior Authorization Restriction for New Starts Only ,Prior authorization applies only for new users or members; it does not apply for those already receiving the drug.,Covered with Condition
 Santa Clara Family Health Plan      ,California, PA NSO-HRM,Prior Authorization (New Starts Only – High Risk Meds) ,"If you are a new member, you (or your 
 physician) are required to get a prior authorization before you fill your prescription for this drug. This drug has been deemed by CMS to be potentially harmful and therefore a High-Risk Medication for Medicare beneficiaries 65 years or older. Without prior authorization, this drug may not be covered",Covered with Condition
@@ -9409,7 +9420,8 @@ SummaCare,Ohio,"PA
 HRM","Prior Authorization 
 Restriction for High 
 Risk Medications","High Risk medications that require a prior 
-authorization.",Covered with Condition
+authorization.
+",Covered with Condition
 SummaCare,Ohio,PA-NSO,Prior Authorization Restriction for New Starts Only ,Prior authorization applies only for new users or members; it does not apply for those already receiving the drug.,Covered with Condition
 SummaCare,Ohio,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
 SummaCare,Ohio,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
@@ -12537,7 +12549,7 @@ is not required for Rhode Island Plans.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alabama,OTC ,Over-the-counter ,An OTC drug is a non-prescription drug.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alabama,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alabama,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alabama,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Mountain Health CO-OP,Montana,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -12547,7 +12559,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alabama,ext-rel,Extended-rel
 Mountain Health CO-OP,Montana,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alaska,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alaska,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alaska,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Mountain Health CO-OP,Montana,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -12557,7 +12569,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Alaska,ext-rel,Extended-rele
 Mountain Health CO-OP,Montana,PA,Prior Authorization,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arizona,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arizona,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arizona,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Mountain Health CO-OP,Montana,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
@@ -12567,7 +12579,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arizona,ext-rel,Extended-rel
 MVP Health Care,Vermont,NM,This prescription drug is not available through mail order service.,This prescription drug is not available through mail order service.,Not Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arkansas,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arkansas,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arkansas,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 MVP Health Care,Vermont,OTC,Over the counter,An OTC drug is a non-prescription drug.,Covered with Condition
@@ -12577,7 +12589,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Arkansas,ext-rel,Extended-re
 MVP Health Care,New York,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,California,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,California,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,California,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 MVP Health Care,New York,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
@@ -12587,7 +12599,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,California,ext-rel,Extended-
 MVP Health Care,New York,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Colorado,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Colorado,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Colorado,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 My Choice Wisconsin,Wisconsin,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -12597,7 +12609,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Colorado,ext-rel,Extended-re
 My Choice Wisconsin,Wisconsin,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Connecticut,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Connecticut,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Connecticut,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 My Choice Wisconsin,Wisconsin,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -12607,7 +12619,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Connecticut,ext-rel,Extended
 Nebraska Total Care,Nebraska,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Delaware,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Delaware,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Delaware,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Nebraska Total Care,Nebraska,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
@@ -12617,7 +12629,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Delaware,ext-rel,Extended-re
 Neighborhood Health Plan of Rhode Island,Rhode Island,OTC,Over the counter,An OTC drug is a non-prescription drug.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,District of Columbia,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,District of Columbia,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,District of Columbia,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Neighborhood Health Plan of Rhode Island,Rhode Island,QL,Quantity Limit,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
@@ -12627,7 +12639,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,District of Columbia,ext-rel
 Network Health,Wisconsin ,QL,Quantity Limit,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Florida,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Florida,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Florida,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,PA,Prior Authorization,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered with Condition
@@ -12637,7 +12649,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Florida,ext-rel,Extended-rel
 Network Health,Wisconsin ,SPC ,Not Restricted to Specialty, It indicates that the medication does not require prescribing by a specialty provider and can be ordered by a general or non-specialist healthcare provider.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Georgia,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Georgia,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Georgia,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,MED,Medical Drug,Max 90 mg Morphine Equivalent Dose per day,Covered with Condition
@@ -12648,7 +12660,7 @@ Network Health,Wisconsin ,ONC,Oncology,"For oncology indications, authorization 
 is to be reviewed by eviCore ",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Hawaii,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Hawaii,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Hawaii,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,OP,Opioid Program,"New prescriptions for opioid medications are limited 
@@ -12660,7 +12672,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Hawaii,ext-rel,Extended-rele
 Network Health,Wisconsin ,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Idaho,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Idaho,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Idaho,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -12670,7 +12682,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Idaho,ext-rel,Extended-relea
 Network Health,Wisconsin ,Tier 4 ,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Illinois,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Illinois,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Illinois,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -12680,7 +12692,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Illinois,ext-rel,Extended-re
 Network Health,Wisconsin ,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Indiana,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Indiana,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Indiana,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -12690,7 +12702,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Indiana,ext-rel,Extended-rel
 Network Health,Wisconsin ,LA,Limited Availability,"Drugs are considered “limited access” if the FDA says the drug can only be given out by certain facilities, doctors or prescribers. These drugs may require extra handling, provider coordination or patient education that can’t be done at a network pharmacy.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Iowa,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Iowa,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Iowa,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Network Health,Wisconsin ,OTC,Over the Counter,An OTC drug is a non-prescription drug.,Covered with Condition
@@ -12700,7 +12712,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Iowa,ext-rel,Extended-releas
 New Hampshire Healthy Families,New hampshire,PA,Prior Authorization,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kansas,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kansas,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kansas,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 New Hampshire Healthy Families,New hampshire,NF,Non-formulary,This product is not covered unless you or your provider request an exception. Alternative medications are listed next to non covered product,Not Covered
@@ -12710,7 +12722,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kansas,ext-rel,Extended-rele
 New Hampshire Healthy Families,New hampshire,SF,Split Fill,"Initially, certain medications may only be available in 15 day-supply increments until you are stabilized on the medication. After you have been taking the medication for 90 days, this restriction may no longer apply.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kentucky,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kentucky,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kentucky,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 New Hampshire Healthy Families,New hampshire,D/D+/C,Not applicable,"Medications on the formulary with D/D+/C may take
@@ -12723,7 +12735,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Kentucky,ext-rel,Extended-re
 Octave Blue cross blue shield,Arkansas,PA,Prior Authorization,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Louisiana,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Louisiana,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Louisiana,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Octave Blue cross blue shield,Arkansas,QL,Quantity Limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered with Condition
@@ -12733,7 +12745,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Louisiana,ext-rel,Extended-r
 Octave Blue cross blue shield,Arkansas,OTC,Over the counter,An OTC drug is a non-prescription drug.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maine,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maine,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maine,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Presbyterian Healthcare,New Mexico,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -12743,7 +12755,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maine,ext-rel,Extended-relea
 Presbyterian Healthcare,New Mexico,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maryland,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maryland,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maryland,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Presbyterian Healthcare,New Mexico,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
@@ -12753,7 +12765,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Maryland,ext-rel,Extended-re
 Network Health,Wisconsin ,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Massachusetts,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Massachusetts,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Massachusetts,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 New Hampshire Healthy Families,New hampshire,Tier 0 ,No copayment,"No copayment for those drugs that are used for prevention and are mandated by the Affordable Care Act. Select oral contraceptives, vitamin D, folic acid for women of child bearing age, over-the-counter (OTC) aspirin, and smoking cessation products may be covered under this tier. Certain age limits may apply.",Covered
@@ -12764,7 +12776,7 @@ Oscar Health ,Iowa,+," $0 Condition Specific
 Plan",This drug is a Medicare Part D covered adult vaccine and is covered at $0 cost sharing.,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Michigan,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ","Covered With Conditions"
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Michigan,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Michigan,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Octave Blue cross blue shield,Arkansas,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -12774,7 +12786,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Michigan,ext-rel,Extended-re
 Oscar Health ,Florida,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Minnesota,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Minnesota,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Minnesota,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,Georgia,Tier 1,Preferred Generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -12785,7 +12797,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Minnesota,ext-rel,Extended-r
 Priority Health,Michigan,Tier 1,Preferred generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Mississippi,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Mississippi,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Mississippi,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Providence Health Plan,Oregon,Tier 1,Preferred generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -12796,7 +12808,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Mississippi,ext-rel,Extended
 New Hampshire Healthy Families,New hampshire,Tier 1B,Non-Preferred Generic Drugs ,Low copayment for those drugs that offer great value compared to other drugs used to treat similar conditions. Select over-the-counter (OTC) drugs may be covered under this tier,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Missouri,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Missouri,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Missouri,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,Missouri,+," $0 Condition Specific 
@@ -12807,7 +12819,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Missouri,ext-rel,Extended-re
 New Hampshire Healthy Families,New hampshire,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Montana,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Montana,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Montana,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Octave Blue cross blue shield,Arkansas,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -12818,7 +12830,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Montana,ext-rel,Extended-rel
 Oscar Health ,New Jersey, ^,Excluded Drug Medications,"This prescription drug is not normally covered in a Medicare Prescription Drug Plan. The amount you pay when you fill a prescription for this drug does not count towards your total drug costs (that is, the amount you pay does not help you qualify for catastrophic coverage).",Not Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nebraska,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nebraska,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nebraska,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,New Jersey,+," $0 Condition Specific 
@@ -12830,7 +12842,7 @@ Oscar Health ,North Carolina,+," $0 Condition Specific
 Plan",This drug is a Medicare Part D covered adult vaccine and is covered at $0 cost sharing.,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nevada,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nevada,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nevada,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,North Carolina,INS,Insulin products at a maximum $35 per month.,Insulin products at a maximum $35 per month.,Covered with Condition
@@ -12840,7 +12852,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Nevada,ext-rel,Extended-rele
 Octave Blue cross blue shield,Arkansas,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Hampshire,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Hampshire,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Hampshire,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,Ohio,+," $0 Condition Specific 
@@ -12851,7 +12863,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Hampshire,ext-rel,Extend
 Oscar Health ,Oklahoma, ^,Excluded Drug Medications,"This prescription drug is not normally covered in a Medicare Prescription Drug Plan. The amount you pay when you fill a prescription for this drug does not count towards your total drug costs (that is, the amount you pay does not help you qualify for catastrophic coverage).",Not Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Jersey,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Jersey,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Jersey,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Oscar Health ,Oklahoma,+," $0 Condition Specific 
@@ -12863,7 +12875,7 @@ Oscar Health ,Texas,+," $0 Condition Specific
 Plan",This drug is a Medicare Part D covered adult vaccine and is covered at $0 cost sharing.,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Mexico,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Mexico,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Mexico,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 New Hampshire Healthy Families,New hampshire,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
@@ -12873,7 +12885,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New Mexico,ext-rel,Extended-
 Oscar Health ,Virginia, ^,Excluded Drug Medications,"This prescription drug is not normally covered in a Medicare Prescription Drug Plan. The amount you pay when you fill a prescription for this drug does not count towards your total drug costs (that is, the amount you pay does not help you qualify for catastrophic coverage).",Not Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New York,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New York,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New York,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 ‍Parkland Community Health Plan,Texas,90 DS,90-Day Supply,After two fills of a 30-day supply within 90 days,Covered with Condition
@@ -12883,7 +12895,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,New York,ext-rel,Extended-re
 Pennsylvania Health & Wellness,Pennsylvania,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Carolina,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Carolina,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Carolina,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Pennsylvania Health & Wellness,Pennsylvania,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
@@ -12893,7 +12905,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Carolina,ext-rel,Exten
 Pennsylvania Health & Wellness,Pennsylvania,AL,Age Limit,"Minimum and maximum age requirements set by an insurance policy or plan that determine when an individual can apply for coverage or renew a policy, often used to manage risk and eligibility.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Dakota,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Dakota,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Dakota,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Physicians Health Plan Northern  Indiana    ,Indiana,Tier 1,Preferred generic ,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -12903,7 +12915,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,North Dakota,ext-rel,Extende
 Physicians Health Plan Northern  Indiana    ,Ohio,PA,Prior Authorization,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Ohio,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Ohio,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Ohio,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Physicians Health Plan Northern  Indiana    ,Ohio,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
@@ -12913,7 +12925,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Ohio,ext-rel,Extended-releas
 Presbyterian Healthcare,New Mexico,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oklahoma,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oklahoma,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oklahoma,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Priority Health,Michigan,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
@@ -12923,7 +12935,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oklahoma,ext-rel,Extended-re
 Octave Blue cross blue shield,Arkansas,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oregon,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oregon,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oregon,QL ,Quantity limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Presbyterian Healthcare,New Mexico,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -12933,7 +12945,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Oregon,ext-rel,Extended-rele
 Priority Health,Michigan,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Pennsylvania,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Pennsylvania,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Pennsylvania,QL ,Quantity limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Priority Health,Michigan,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -12943,7 +12955,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Pennsylvania,ext-rel,Extende
 Priority Health,Michigan,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Rhode Island,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Rhode Island,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Rhode Island,QL ,Quantity limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Providence Health Plan,Oregon,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
@@ -12953,7 +12965,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Rhode Island,ext-rel,Extende
 Providence Health Plan,Washington,Tier 2,Preferred Brand Drugs, Generic or brand drugs that are available at the lowest cost share for the plan,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Carolina,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Carolina,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Carolina,QL ,Quantity limits,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Providence Health Plan,Washington,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
@@ -12963,7 +12975,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Carolina,ext-rel,Exten
 Providence Health Plan,Washington,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Dakota,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Dakota,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Dakota,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Providence Health Plan,Washington,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
@@ -12973,7 +12985,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,South Dakota,ext-rel,Extende
 Sanford Health Plan,North Dakota,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Tennessee,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Tennessee,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Tennessee,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,North Dakota,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
@@ -12983,7 +12995,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Tennessee,ext-rel,Extended-r
 Sanford Health Plan,North Dakota,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Texas,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Texas,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Texas,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,North Dakota,ST NSO,Step Therapy for New Starts Only, It means that patients beginning a new medication must try one or more insurer-preferred drugs first before coverage for the prescribed medication will be considered,Covered with Condition
@@ -12993,7 +13005,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Texas,ext-rel,Extended-relea
 Sanford Health Plan,North Dakota,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Utah,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Utah,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Utah,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,North Dakota,Tier 14,"Medical Benefit 
@@ -13007,7 +13019,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Utah,ext-rel,Extended-releas
 Sanford Health Plan,Minnesota,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Vermont,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Vermont,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Vermont,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,Minnesota,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
@@ -13017,7 +13029,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Vermont,ext-rel,Extended-rel
 Sanford Health Plan,Minnesota,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Virginia,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Virginia,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Virginia,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,Minnesota,ST NSO,Step Therapy for New Starts Only, It means that patients beginning a new medication must try one or more insurer-preferred drugs first before coverage for the prescribed medication will be considered,Covered with Condition
@@ -13027,7 +13039,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Virginia,ext-rel,Extended-re
 Sanford Health Plan,Minnesota,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Washington,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Washington,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Washington,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,Iowa,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -13037,7 +13049,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Washington,ext-rel,Extended-
 Sanford Health Plan,Iowa,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,West Virginia,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,West Virginia,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,West Virginia,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,Iowa,Tier 5,Specialty Tier,Some injectables and other high-cost drugs,Covered
@@ -13047,7 +13059,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,West Virginia,ext-rel,Extend
 Sanford Health Plan,Iowa,ST NSO,Step Therapy for New Starts Only, It means that patients beginning a new medication must try one or more insurer-preferred drugs first before coverage for the prescribed medication will be considered,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wisconsin,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wisconsin,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wisconsin,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Sanford Health Plan,Iowa,Tier 2,Preferred Brand Drugs,Generic or brand drugs that the plan offers at a higher cost to you than Tier 1 Preferred Generic drugs,Covered
@@ -13057,7 +13069,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wisconsin,ext-rel,Extended-r
 CarePlus Health Plans Florida,Florida,Tier 6,Select Care Drugs,"Zero-dollar ($0) cost tier. This tier includes limited drug categories (i.e., certain high blood pressure, high cholesterol, vaccines, and oral diabetic drugs).",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wyoming,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wyoming,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wyoming,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Tufts Health Plan,Massachusetts ,Tier 1,Preferred Generic,Generic or brand drugs that are available at the lowest cost share for the plan,Covered
@@ -13067,7 +13079,7 @@ UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Wyoming,ext-rel,Extended-rel
 Tufts Health Plan,Massachusetts ,Tier 3,Preferred Brand,This tier includes preferred brand-name drugs as well as some generic drugs.,Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Puerto Rico,PA,Prior Authorization,"The Plan requires you or your physician to get prior authorization for certain drugs. 
 This means that you will need to get approval from The Plan before you fill your prescriptions. If you 
-don’t get approval, The Plan may not cover the drug. ",Covered
+don’t get approval, The Plan may not cover the drug. ",Covered With Conditions
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Puerto Rico,ACSF,ADVANCED CONTROL SPECIALTY FORMULARY®,"The Funds has a preferred product program called the Advanced Control Specialty Formulary (ACSF). The preferred drugs in ACSF classes are available at the standard copay. If a non-preferred drug within these classes is selected, the prescriber will be asked to consider preferred drug(s) to be used before the non-preferred drug will be covered",Covered with Condition
 UNITED MINE WORKERS OF AMERICA HLTH & RETIREMENT_BO,Puerto Rico,QL ,QUANTITY LIMITS,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Tufts Health Plan,Massachusetts ,Tier 4,Non-Preferred Drug,Specialty drugs or high-cost non-preferred brands,Covered
@@ -14144,3 +14156,6 @@ Aetna,North Carolina,QLR,(Quantiy Limit) QL Restriction based on Age,"Quantity L
 Aetna,North Carolina,PA,Prior Authorization ,"Our plan requires you or your prescriber to get prior authorization for certain drugs. This means that you will need to get approval from us before you fill your prescriptions. If you don’t get approval, we may not cover the drug.",Covered
 Aetna,North Carolina,QL,Quantity Limit ,"For certain drugs, our plan limits the amount of the drug that we will cover. For example, our plan provides 30 tablets per 30 days per prescription for atorvastatin. This may be in addition to a standard one‑month or three‑month supply.",Covered
 Aetna,North Carolina,ST,Step Therapy,"In some cases, our plan requires you to first try certain drugs to treat your medical condition before we will cover another drug for that condition. For example, if Drug A and Drug B both treat your medical condition, we may not cover Drug B unless you try Drug A first. If Drug A does not work for you, we will then cover Drug B.",Covered with Condition
+,,,,,Covered With Conditions
+,,,,,Covered With Conditions
+,,,,,
