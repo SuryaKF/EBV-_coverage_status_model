@@ -1,0 +1,95 @@
+======================================================================
+COVERAGE CLASSIFICATION MODEL - TRAINING REPORT (5 CLASSES)
+======================================================================
+Generated: 2026-02-18 11:51:40
+
+----------------------------------------------------------------------
+1. DATA SUMMARY
+----------------------------------------------------------------------
+Total Records: 11975
+Features Used: 500 TF-IDF + 724 Categorical
+
+Class Distribution (target):
+  Coverage with Conditions
+  Coverage with Conditions(PA Required)
+  Coverage with Conditions(ST Required)
+  Covered
+  Not Covered
+
+----------------------------------------------------------------------
+2. MODEL COMPARISON
+----------------------------------------------------------------------
+Model                              CV Accuracy   Test Accuracy       Time
+----------------------------------------------------------------------
+Random Forest             0.8994 (+/-0.0123)   0.8969          10.6s
+Gradient Boosting         0.9868 (+/-0.0022)   0.9850        2005.0s
+SVM                       0.9831 (+/-0.0027)   0.9837        1566.8s
+Logistic Regression       0.9838 (+/-0.0019)   0.9833          30.9s
+
+----------------------------------------------------------------------
+3. BEST MODEL DETAILS
+----------------------------------------------------------------------
+Selected Model: Gradient Boosting
+Training Accuracy: 0.9953
+CV Accuracy: 0.9868 (+/- 0.0022)
+Test Accuracy: 0.9850
+
+----------------------------------------------------------------------
+4. FIT STATUS
+----------------------------------------------------------------------
+Status: WELL-FITTED
+Train-Test gap: 0.0103
+Train-CV gap:   0.0085
+
+----------------------------------------------------------------------
+5. TOP 20 FEATURES
+----------------------------------------------------------------------
+  try                                                     0.212875
+  prior                                                   0.191116
+  cost                                                    0.110805
+  prescription drug                                       0.094169
+  covered                                                 0.083292
+  limited                                                 0.027818
+  used                                                    0.024238
+  supply                                                  0.023176
+  drug                                                    0.019970
+  drugs                                                   0.012228
+  includes                                                0.011271
+  cover drug                                              0.008633
+  tier includes                                           0.008475
+  covered tier                                            0.007696
+  ACRONYM_clean_B/D PA                                    0.007577
+  excluded                                                0.007459
+  non mail                                                0.006508
+  ACRONYM_clean_NM                                        0.006337
+  otc                                                     0.006199
+  generic                                                 0.005790
+
+----------------------------------------------------------------------
+6. CLASSIFICATION REPORT
+----------------------------------------------------------------------
+                                       precision    recall  f1-score   support
+
+             Coverage with Conditions       0.98      0.99      0.98      1075
+Coverage with Conditions(PA Required)       1.00      1.00      1.00       229
+Coverage with Conditions(ST Required)       1.00      1.00      1.00       163
+                              Covered       0.98      0.98      0.98       843
+                          Not Covered       0.99      0.99      0.99        85
+
+                             accuracy                           0.98      2395
+                            macro avg       0.99      0.99      0.99      2395
+                         weighted avg       0.98      0.98      0.98      2395
+
+----------------------------------------------------------------------
+7. CONFUSION MATRIX
+----------------------------------------------------------------------
+                                       Coverage with Conditions  Coverage with Conditions(PA Required)  Coverage with Conditions(ST Required)  Covered  Not Covered
+Coverage with Conditions                                   1060                                      1                                      0       13            1
+Coverage with Conditions(PA Required)                         0                                    229                                      0        0            0
+Coverage with Conditions(ST Required)                         0                                      0                                    163        0            0
+Covered                                                      20                                      0                                      0      823            0
+Not Covered                                                   0                                      0                                      0        1           84
+
+======================================================================
+END OF REPORT
+======================================================================
