@@ -1,0 +1,10 @@
+# Cron schedule (host-level cron)
+# ETL runs every hour
+
+0 * * * * cd /opt/coverage && /usr/bin/python etl_ingest.py --input /data/incoming/latest.csv >> /var/log/coverage/etl_ingest.log 2>&1
+10 * * * * cd /opt/coverage && /usr/bin/python etl_validate.py --batch-id ${BATCH_ID} >> /var/log/coverage/etl_validate.log 2>&1
+20 * * * * cd /opt/coverage && /usr/bin/python etl_transform.py --batch-id ${BATCH_ID} >> /var/log/coverage/etl_transform.log 2>&1
+30 * * * * cd /opt/coverage && /usr/bin/python etl_snapshot.py --batch-id ${BATCH_ID} >> /var/log/coverage/etl_snapshot.log 2>&1
+
+# Training is intentionally manual
+# cd /opt/coverage && /usr/bin/python train_model.py --snapshot-id <snapshot_id>

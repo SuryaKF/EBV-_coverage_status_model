@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coverage-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: coverage-api
+  template:
+    metadata:
+      labels:
+        app: coverage-api
+    spec:
+      containers:
+        - name: coverage-api
+          image: ghcr.io/your-org/coverage-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: coverage-secrets
+                  key: database_url
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: coverage-secrets
+                  key: api_key
+            - name: ARTIFACT_ROOT_URI
+              valueFrom:
+                secretKeyRef:
+                  name: coverage-secrets
+                  key: artifact_root_uri
