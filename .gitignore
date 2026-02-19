@@ -9,6 +9,7 @@ wheels/
 # Virtual environments
 .venv
 
+# Local env and artifacts
+.env
 artifacts/
-__pycache__/
 .pytest_cache/

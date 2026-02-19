@@ -1,3 +1,9 @@
+"""
+DEPRECATED LEGACY SCRIPT
+This file is retained for historical reference only.
+Active ETL/ML/API implementation lives under `coverage_pipeline/`.
+Use: etl_ingest.py -> etl_validate.py -> etl_transform.py -> etl_snapshot.py -> train_model.py -> approve_model.py
+"""
 import pandas as pd
 import os
 import re
