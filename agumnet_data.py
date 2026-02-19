@@ -251,7 +251,7 @@ def clean_coverage_data(input_path, output_path=None):
 
 
 if __name__ == "__main__":
-    input_file = r"data\Cleaned Output\Cleaned_January_Acronym_2026.csv"
+    input_file = r"data\Before_cleaning original_data\Cleaned_January_Acronym_2026.csv"
     output_file = r"data\Cleaned Output\Cleaned_January_Acronym_2026_augmented.csv"
 
     try:
