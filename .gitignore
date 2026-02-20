@@ -8,3 +8,22 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Environment variables (secrets)
+.env
+.env.*
+
+# MLflow artifacts
+mlruns/
+mlflow.db
+
+# Logs
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# Large binary files (optional - uncomment to exclude)
+# models/*.pkl
+# data/*.csv

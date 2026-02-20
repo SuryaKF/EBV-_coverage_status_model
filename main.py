@@ -68,11 +68,11 @@ saved_model = joblib.load(r"c:\Users\VH0000812\Desktop\Coverage\models\coverage_
 # Make a prediction
 result = predict_coverage_status(
     saved_model,
-    payer_name="cook childrens health plan",
-    state_name="Texas",
-    acronym="NPD",
-    expansion="Non-preferred drug.",
-    explanation="Refers to brand-name drugs on a formulary that are not in the preferred tier, usually resulting in higher copayments or coinsurance compared to preferred brand-name drugs.")
+    payer_name="Community Health Group",
+    state_name="California",
+    acronym="PA-NSO",
+    expansion="Prior Authorization Restriction for New Starts Only ",
+    explanation="Prior authorization applies only for new users or members; it does not apply for those already receiving the drug.")
 # Output as formatted JSON
 print(json.dumps(result, indent=2))
 

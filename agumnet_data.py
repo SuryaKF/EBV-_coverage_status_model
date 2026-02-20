@@ -29,6 +29,47 @@ VALID_CLASSES = [
 ]
 
 
+def remove_null_rows(df, verbose=True):
+    """
+    Check for null values across the entire DataFrame and remove any row
+    that contains at least one null value.
+
+    Args:
+        df:      Input DataFrame.
+        verbose: If True, print a summary of nulls found and rows removed.
+
+    Returns:
+        DataFrame with all-null rows removed.
+    """
+    null_counts = df.isnull().sum()
+    total_nulls = null_counts.sum()
+
+    if verbose:
+        print("-" * 60)
+        print("NULL VALUE CHECK")
+        print("-" * 60)
+        if total_nulls == 0:
+            print("  No null values found in the dataset.")
+        else:
+            print(f"  Total null values found: {total_nulls}")
+            for col, cnt in null_counts.items():
+                if cnt > 0:
+                    print(f"    {col}: {cnt} null(s)")
+
+    rows_before = len(df)
+    df_clean = df.dropna().copy()
+    rows_after = len(df_clean)
+    removed = rows_before - rows_after
+
+    if verbose:
+        print(f"\n  Rows before: {rows_before}")
+        print(f"  Rows removed (containing nulls): {removed}")
+        print(f"  Rows after: {rows_after}")
+        print("-" * 60)
+
+    return df_clean
+
+
 def clean_coverage_data(input_path, output_path=None):
     """
     Load CSV data, drop null Coverage Status rows, and augment the
@@ -114,17 +155,9 @@ def clean_coverage_data(input_path, output_path=None):
     print(f"\nRows before processing: {initial_count}")
 
     # ------------------------------------------------------------------
-    # 3. Null handling
+    # 3. Null handling – remove any row with null values
     # ------------------------------------------------------------------
-    print("-" * 60)
-    print("NULL VALUES PER COLUMN:")
-    print("-" * 60)
-    for col, cnt in df.isnull().sum().items():
-        print(f"  {col}: {cnt}")
-
-    coverage_null = df['Coverage Status'].isnull().sum()
-    print(f"\nRemoving {coverage_null} rows with null Coverage Status")
-    df = df.dropna(subset=['Coverage Status']).copy()
+    df = remove_null_rows(df, verbose=True)
     df['Coverage Status'] = df['Coverage Status'].astype(str).str.strip()
 
     # ------------------------------------------------------------------

@@ -1,0 +1,71 @@
+======================================================================
+COVERAGE CLASSIFICATION MODEL - TRAINING REPORT (5 CLASSES)
+======================================================================
+Generated: 2026-02-20 12:20:41
+
+----------------------------------------------------------------------
+1. DATA SUMMARY
+----------------------------------------------------------------------
+Total Records: 11975
+Features Used: 500 TF-IDF + 721 Categorical
+
+Class Distribution (target):
+  Coverage with Conditions
+  Coverage with Conditions(PA Required)
+  Coverage with Conditions(ST Required)
+  Covered
+  Not Covered
+
+----------------------------------------------------------------------
+2. MODEL COMPARISON
+----------------------------------------------------------------------
+Model                              CV Accuracy   Test Accuracy       Time
+----------------------------------------------------------------------
+Random Forest             0.9031 (+/-0.0056)   0.9010          14.8s
+Gradient Boosting         0.9864 (+/-0.0022)   0.9816        3228.8s
+SVM                       0.9833 (+/-0.0044)   0.9846        2105.4s
+Logistic Regression       0.9841 (+/-0.0048)   0.9850          10.3s
+
+----------------------------------------------------------------------
+3. BEST MODEL DETAILS
+----------------------------------------------------------------------
+Selected Model: Logistic Regression
+Training Accuracy: 0.9928
+CV Accuracy: 0.9841 (+/- 0.0048)
+Test Accuracy: 0.9850
+
+----------------------------------------------------------------------
+4. FIT STATUS
+----------------------------------------------------------------------
+Status: WELL-FITTED
+Train-Test gap: 0.0078
+Train-CV gap:   0.0087
+
+----------------------------------------------------------------------
+6. CLASSIFICATION REPORT
+----------------------------------------------------------------------
+                                       precision    recall  f1-score   support
+
+             Coverage with Conditions       0.98      0.99      0.98      1075
+Coverage with Conditions(PA Required)       1.00      1.00      1.00       229
+Coverage with Conditions(ST Required)       1.00      0.99      1.00       162
+                              Covered       0.98      0.98      0.98       844
+                          Not Covered       0.99      0.99      0.99        85
+
+                             accuracy                           0.98      2395
+                            macro avg       0.99      0.99      0.99      2395
+                         weighted avg       0.98      0.98      0.98      2395
+
+----------------------------------------------------------------------
+7. CONFUSION MATRIX
+----------------------------------------------------------------------
+                                       Coverage with Conditions  Coverage with Conditions(PA Required)  Coverage with Conditions(ST Required)  Covered  Not Covered
+Coverage with Conditions                                   1059                                      0                                      0       15            1
+Coverage with Conditions(PA Required)                         0                                    229                                      0        0            0
+Coverage with Conditions(ST Required)                         0                                      1                                    161        0            0
+Covered                                                      18                                      0                                      0      826            0
+Not Covered                                                   1                                      0                                      0        0           84
+
+======================================================================
+END OF REPORT
+======================================================================

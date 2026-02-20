@@ -16,7 +16,14 @@ import numpy as np
 import joblib
 import os
 import time
+import json
+import logging
 from datetime import datetime
+
+import matplotlib
+matplotlib.use("Agg")  # non-interactive backend for CI / headless
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -27,6 +34,24 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
+
+import mlflow
+import mlflow.sklearn
+
+# ─── LOGGING CONFIGURATION ──────────────────────────────────────────────────
+LOG_DIR = "logs"
+os.makedirs(LOG_DIR, exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)-8s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.StreamHandler(),                                      # console output
+        logging.FileHandler(os.path.join(LOG_DIR, "training.log"), mode="a"),  # file output
+    ],
+)
+logger = logging.getLogger(__name__)
 
 # ─── CONFIGURATION ──────────────────────────────────────────────────────────
 DATA_PATH       = r"data\Cleaned Output\Cleaned_January_Acronym_2026_augmented.csv"
@@ -45,21 +70,29 @@ VALID_CLASSES = [
     "Coverage with Conditions(ST Required)",
 ]
 
+# ─── MLFLOW CONFIGURATION ───────────────────────────────────────────────────
+MLFLOW_EXPERIMENT  = "Coverage_Classification"
+MLFLOW_TRACKING_URI = "sqlite:///mlflow.db"  # SQLite backend (recommended over filesystem)
+
 
 # ─── DATA LOADING ───────────────────────────────────────────────────────────
 def load_data(path):
     """Load augmented CSV and return feature-ready DataFrame."""
-    print("=" * 70)
-    print("1. LOADING DATA")
-    print("=" * 70)
+    logger.info("=" * 70)
+    logger.info("STEP 1: LOADING DATA")
+    logger.info("=" * 70)
+    logger.debug(f"Attempting to load data from: {path}")
 
     for enc in ("utf-8", "cp1252", "latin-1"):
         try:
             df = pd.read_csv(path, encoding=enc)
+            logger.debug(f"Successfully loaded with encoding: {enc}")
             break
         except UnicodeDecodeError:
+            logger.debug(f"Failed to decode with encoding: {enc}")
             continue
     else:
+        logger.error(f"Cannot decode file: {path}")
         raise RuntimeError(f"Cannot decode {path}")
 
     df.columns = df.columns.str.strip()
@@ -80,21 +113,21 @@ def load_data(path):
     null_before = len(df)
     null_counts = df.isnull().sum()
     if null_counts.any():
-        print(f"\n  Null values detected:")
+        logger.warning("Null values detected in dataset:")
         for col, cnt in null_counts[null_counts > 0].items():
-            print(f"    {col}: {cnt}")
+            logger.warning(f"  {col}: {cnt} null(s)")
         df = df.dropna().copy()
-        print(f"  Dropped {null_before - len(df)} rows with NaN/null values")
+        logger.info(f"Dropped {null_before - len(df)} rows with NaN/null values")
     else:
-        print("  No null values found")
+        logger.info("No null values found in dataset")
 
     # Keep only rows with valid target classes
     df = df[df["Coverage Status"].isin(VALID_CLASSES)].copy()
 
-    print(f"  Records: {len(df)}")
-    print(f"\n  Class distribution:")
+    logger.info(f"Total records loaded: {len(df)}")
+    logger.info("Class distribution:")
     for cls, cnt in df["Coverage Status"].value_counts().sort_index().items():
-        print(f"    {cls:50s} {cnt:>5}  ({cnt/len(df)*100:.1f}%)")
+        logger.info(f"  {cls:50s} {cnt:>5}  ({cnt/len(df)*100:.1f}%)")
 
     return df
 
@@ -102,11 +135,12 @@ def load_data(path):
 # ─── FEATURE ENGINEERING ────────────────────────────────────────────────────
 def build_features(df):
     """Create TF-IDF text + OneHot categorical features and LabelEncoder."""
-    print("\n" + "=" * 70)
-    print("2. FEATURE ENGINEERING")
-    print("=" * 70)
+    logger.info("=" * 70)
+    logger.info("STEP 2: FEATURE ENGINEERING")
+    logger.info("=" * 70)
 
     # --- Text features ---
+    logger.debug("Building TF-IDF text features...")
     df["EXPANSION"]   = df["EXPANSION"].fillna("")
     df["Explanation"]  = df["Explanation"].fillna("")
     df["combined_text"] = (
@@ -119,9 +153,10 @@ def build_features(df):
         stop_words="english",
     )
     X_text = tfidf.fit_transform(df["combined_text"]).toarray()
-    print(f"  TF-IDF features : {X_text.shape[1]}")
+    logger.info(f"TF-IDF features: {X_text.shape[1]}")
 
     # --- Categorical features ---
+    logger.debug("Building OneHot categorical features...")
     df["ACRONYM_clean"] = df["Acronym"].fillna("").str.strip().str.upper()
     cat_cols = ["PAYER NAME", "STATE NAME", "ACRONYM_clean"]
     for c in cat_cols:
@@ -129,25 +164,99 @@ def build_features(df):
 
     onehot = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
     X_cat = onehot.fit_transform(df[cat_cols])
-    print(f"  OneHot features : {X_cat.shape[1]}")
+    logger.info(f"OneHot features: {X_cat.shape[1]}")
 
     X = np.hstack([X_text, X_cat])
-    print(f"  Combined features: {X.shape[1]}")
+    logger.info(f"Combined feature matrix shape: {X.shape}")
 
     # --- Target ---
     le = LabelEncoder()
     y = le.fit_transform(df["Coverage Status"])
-    print(f"  Classes ({len(le.classes_)}): {list(le.classes_)}")
+    logger.info(f"Target classes ({len(le.classes_)}): {list(le.classes_)}")
 
     return X, y, tfidf, onehot, le
 
 
 # ─── TRAINING ───────────────────────────────────────────────────────────────
+# ─── VISUALISATION HELPERS ───────────────────────────────────────────────────
+def _plot_confusion_matrix(cm, class_names, title="Confusion Matrix"):
+    """Return a matplotlib Figure of the confusion matrix heatmap."""
+    fig, ax = plt.subplots(figsize=(10, 8))
+    sns.heatmap(
+        cm, annot=True, fmt="d", cmap="Blues",
+        xticklabels=class_names, yticklabels=class_names, ax=ax,
+    )
+    ax.set_xlabel("Predicted")
+    ax.set_ylabel("Actual")
+    ax.set_title(title)
+    plt.tight_layout()
+    return fig
+
+
+def _plot_model_comparison(results):
+    """Return a bar-chart Figure comparing all models on CV / Test accuracy."""
+    names = list(results.keys())
+    cv_accs = [results[n]["cv_mean"] for n in names]
+    test_accs = [results[n]["test_acc"] for n in names]
+
+    x = np.arange(len(names))
+    width = 0.35
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.bar(x - width / 2, cv_accs,  width, label="CV Accuracy", color="steelblue")
+    ax.bar(x + width / 2, test_accs, width, label="Test Accuracy", color="coral")
+    ax.set_ylabel("Accuracy")
+    ax.set_title("Model Comparison – CV vs Test Accuracy")
+    ax.set_xticks(x)
+    ax.set_xticklabels(names, rotation=15, ha="right")
+    ax.set_ylim(0, 1.05)
+    ax.legend()
+    for i, (cv, te) in enumerate(zip(cv_accs, test_accs)):
+        ax.text(i - width / 2, cv + 0.01, f"{cv:.3f}", ha="center", fontsize=9)
+        ax.text(i + width / 2, te + 0.01, f"{te:.3f}", ha="center", fontsize=9)
+    plt.tight_layout()
+    return fig
+
+
+def _plot_feature_importances(importances, feat_names, top_n=20):
+    """Return a horizontal bar-chart Figure of the top-N feature importances."""
+    idx = np.argsort(importances)[::-1][:top_n]
+    top_imp = importances[idx]
+    top_names = [feat_names[i] if i < len(feat_names) else f"feature_{i}" for i in idx]
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.barh(range(len(top_imp)), top_imp[::-1], color="teal")
+    ax.set_yticks(range(len(top_imp)))
+    ax.set_yticklabels(top_names[::-1], fontsize=9)
+    ax.set_xlabel("Importance")
+    ax.set_title(f"Top {top_n} Feature Importances")
+    plt.tight_layout()
+    return fig
+
+
+def _plot_class_distribution(y, le, title="Class Distribution"):
+    """Return a bar-chart Figure of the class distribution."""
+    classes = le.classes_
+    counts = np.bincount(y, minlength=len(classes))
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.bar(range(len(classes)), counts, color="mediumpurple")
+    ax.set_xticks(range(len(classes)))
+    ax.set_xticklabels(classes, rotation=20, ha="right", fontsize=9)
+    ax.set_ylabel("Count")
+    ax.set_title(title)
+    for bar, cnt in zip(bars, counts):
+        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.5,
+                str(cnt), ha="center", fontsize=9)
+    plt.tight_layout()
+    return fig
+
+
+# ─── TRAINING ───────────────────────────────────────────────────────────────
 def train_models(X_train, y_train, X_test, y_test, le):
     """Train multiple models with SMOTE + CV; return results dict."""
-    print("\n" + "=" * 70)
-    print("3. MODEL TRAINING  (SMOTE + 5-fold Stratified CV)")
-    print("=" * 70)
+    logger.info("=" * 70)
+    logger.info("STEP 3: MODEL TRAINING (SMOTE + 5-fold Stratified CV)")
+    logger.info("=" * 70)
 
     models = {
         "Random Forest": RandomForestClassifier(
@@ -159,7 +268,7 @@ def train_models(X_train, y_train, X_test, y_test, le):
         ),
         "SVM": SVC(C=0.5, kernel="rbf", probability=True, random_state=RANDOM_STATE),
         "Logistic Regression": LogisticRegression(
-            C=0.5, max_iter=1000, random_state=RANDOM_STATE, n_jobs=-1
+            C=0.5, max_iter=1000, random_state=RANDOM_STATE
         ),
     }
 
@@ -167,7 +276,7 @@ def train_models(X_train, y_train, X_test, y_test, le):
     results = {}
 
     for name, clf in models.items():
-        print(f"\n  ── {name} ──")
+        logger.info(f"Training model: {name}")
         t0 = time.time()
 
         # SMOTE pipeline (applied inside each CV fold → no data leakage)
@@ -177,11 +286,13 @@ def train_models(X_train, y_train, X_test, y_test, le):
         ])
 
         # Cross-validation on training set
+        logger.debug(f"Running {CV_FOLDS}-fold cross-validation for {name}...")
         cv_scores = cross_val_score(pipe, X_train, y_train, cv=cv, scoring="accuracy")
         cv_mean, cv_std = cv_scores.mean(), cv_scores.std()
-        print(f"    CV Accuracy : {cv_mean:.4f} (+/- {cv_std:.4f})")
+        logger.info(f"  [{name}] CV Accuracy: {cv_mean:.4f} (+/- {cv_std:.4f})")
 
         # Fit on full training set (with SMOTE)
+        logger.debug(f"Applying SMOTE and fitting {name} on full training set...")
         smote = SMOTE(random_state=RANDOM_STATE)
         X_res, y_res = smote.fit_resample(X_train, y_train)
         clf.fit(X_res, y_res)
@@ -191,9 +302,9 @@ def train_models(X_train, y_train, X_test, y_test, le):
         test_acc  = accuracy_score(y_test, clf.predict(X_test))
         elapsed   = time.time() - t0
 
-        print(f"    Train Acc   : {train_acc:.4f}")
-        print(f"    Test  Acc   : {test_acc:.4f}")
-        print(f"    Time        : {elapsed:.1f}s")
+        logger.info(f"  [{name}] Train Accuracy: {train_acc:.4f}")
+        logger.info(f"  [{name}] Test Accuracy:  {test_acc:.4f}")
+        logger.info(f"  [{name}] Training time:  {elapsed:.1f}s")
 
         results[name] = {
             "model": clf,
@@ -204,56 +315,61 @@ def train_models(X_train, y_train, X_test, y_test, le):
             "time": elapsed,
         }
 
+    logger.info(f"Completed training {len(models)} models")
     return results
 
 
 # ─── SELECTION & REPORTING ──────────────────────────────────────────────────
-def select_and_save(results, X_test, y_test, le, tfidf, onehot):
-    """Pick the best model, print detailed report, save artefacts."""
-    print("\n" + "=" * 70)
-    print("4. MODEL COMPARISON")
-    print("=" * 70)
-    header = f"  {'Model':<25s} {'CV Acc':>10s} {'Test Acc':>10s} {'Time':>8s}"
-    print(header)
-    print("  " + "-" * len(header.strip()))
+def select_and_save(results, X_train, y_train, X_test, y_test, le, tfidf, onehot):
+    """Pick the best model, print detailed report, log everything to MLflow, save artefacts."""
+    logger.info("=" * 70)
+    logger.info("STEP 4: MODEL COMPARISON")
+    logger.info("=" * 70)
+    logger.info(f"{'Model':<25s} {'CV Acc':>15s} {'Test Acc':>12s} {'Time':>10s}")
+    logger.info("-" * 65)
     for name, r in results.items():
-        print(f"  {name:<25s} {r['cv_mean']:.4f}+/-{r['cv_std']:.4f}  {r['test_acc']:.4f}    {r['time']:>6.1f}s")
+        logger.info(f"{name:<25s} {r['cv_mean']:.4f}+/-{r['cv_std']:.4f}   {r['test_acc']:.4f}   {r['time']:>8.1f}s")
 
     best_name = max(results, key=lambda k: results[k]["test_acc"])
     best = results[best_name]
     model = best["model"]
-    print(f"\n  ★ Best model: {best_name}  (Test Acc = {best['test_acc']:.4f})")
+    logger.info(f"BEST MODEL: {best_name} (Test Acc = {best['test_acc']:.4f})")
 
     # ── Detailed report on test set ──
     y_pred = model.predict(X_test)
     class_names = list(le.classes_)
 
-    print("\n" + "=" * 70)
-    print("5. CLASSIFICATION REPORT")
-    print("=" * 70)
+    logger.info("=" * 70)
+    logger.info("STEP 5: CLASSIFICATION REPORT")
+    logger.info("=" * 70)
     report_text = classification_report(y_test, y_pred, target_names=class_names)
-    print(report_text)
+    for line in report_text.strip().split("\n"):
+        logger.info(line)
 
-    print("=" * 70)
-    print("6. CONFUSION MATRIX")
-    print("=" * 70)
+    logger.info("=" * 70)
+    logger.info("STEP 6: CONFUSION MATRIX")
+    logger.info("=" * 70)
     cm = confusion_matrix(y_test, y_pred)
     cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
-    print(cm_df.to_string())
+    for line in cm_df.to_string().split("\n"):
+        logger.info(line)
 
     # ── Fit-status analysis ──
     train_test_gap = best["train_acc"] - best["test_acc"]
     train_cv_gap   = best["train_acc"] - best["cv_mean"]
     if best["train_acc"] < 0.85:
         fit_status = "UNDERFITTED"
+        logger.warning(f"Model is UNDERFITTED (Train Acc < 0.85)")
     elif train_test_gap > 0.05:
         fit_status = "OVERFITTED"
+        logger.warning(f"Model is OVERFITTED (Train-Test gap > 0.05)")
     else:
         fit_status = "WELL-FITTED"
+        logger.info(f"Model is WELL-FITTED")
 
-    print(f"\n  Fit status: {fit_status}")
-    print(f"    Train-Test gap : {train_test_gap:.4f}")
-    print(f"    Train-CV gap   : {train_cv_gap:.4f}")
+    logger.info(f"Fit status: {fit_status}")
+    logger.info(f"  Train-Test gap: {train_test_gap:.4f}")
+    logger.info(f"  Train-CV gap:   {train_cv_gap:.4f}")
 
     # ── Feature importance (if available) ──
     top_features = []
@@ -261,15 +377,15 @@ def select_and_save(results, X_test, y_test, le, tfidf, onehot):
         feat_names = list(tfidf.get_feature_names_out()) + list(onehot.get_feature_names_out())
         importances = model.feature_importances_
         idx = np.argsort(importances)[::-1][:20]
-        print("\n" + "=" * 70)
-        print("7. TOP 20 FEATURES")
-        print("=" * 70)
+        logger.info("=" * 70)
+        logger.info("STEP 7: TOP 20 FEATURES")
+        logger.info("=" * 70)
         for i in idx:
             fname = feat_names[i] if i < len(feat_names) else f"feature_{i}"
-            print(f"    {fname:<55s} {importances[i]:.6f}")
+            logger.info(f"  {fname:<55s} {importances[i]:.6f}")
             top_features.append((fname, float(importances[i])))
 
-    # ── Save model ──
+    # ── Save model (local) ──
     os.makedirs(MODEL_DIR, exist_ok=True)
     model_path = os.path.join(MODEL_DIR, "coverage_model.pkl")
     artefact = {
@@ -290,9 +406,9 @@ def select_and_save(results, X_test, y_test, le, tfidf, onehot):
         },
     }
     joblib.dump(artefact, model_path)
-    print(f"\n  ✓ Model saved to {model_path}")
+    logger.info(f"Model saved to {model_path}")
 
-    # ── Save report ──
+    # ── Save text report ──
     os.makedirs(REPORT_DIR, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     report_path = os.path.join(REPORT_DIR, f"training_report_{ts}.txt")
@@ -339,15 +455,124 @@ def select_and_save(results, X_test, y_test, le, tfidf, onehot):
 
         f.write("\n" + "=" * 70 + "\nEND OF REPORT\n" + "=" * 70 + "\n")
 
-    print(f"  ✓ Report saved to {report_path}")
+    logger.info(f"Training report saved to {report_path}")
+
+    # ==================================================================
+    #  MLFLOW TRACKING & MODEL REGISTRY
+    # ==================================================================
+    logger.info("=" * 70)
+    logger.info("STEP 8: MLFLOW EXPERIMENT TRACKING")
+    logger.info("=" * 70)
+
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+    mlflow.set_experiment(MLFLOW_EXPERIMENT)
+
+    # --- Child runs: one per candidate model ---
+    parent_run_name = f"training_run_{ts}"
+    with mlflow.start_run(run_name=parent_run_name) as parent_run:
+        # Log shared parameters on the parent run
+        mlflow.log_params({
+            "tfidf_max_features": TFIDF_MAX_FEAT,
+            "test_size": TEST_SIZE,
+            "cv_folds": CV_FOLDS,
+            "random_state": RANDOM_STATE,
+            "num_classes": len(class_names),
+            "train_samples": int(len(y_train)),
+            "test_samples": int(len(y_test)),
+        })
+        mlflow.set_tag("best_model", best_name)
+        mlflow.set_tag("fit_status", fit_status)
+
+        # -- Log each candidate model as a nested (child) run --
+        for name, r in results.items():
+            with mlflow.start_run(run_name=name, nested=True) as child_run:
+                mlflow.set_tag("model_type", type(r["model"]).__name__)
+                mlflow.log_metrics({
+                    "cv_accuracy_mean": r["cv_mean"],
+                    "cv_accuracy_std": r["cv_std"],
+                    "train_accuracy": r["train_acc"],
+                    "test_accuracy": r["test_acc"],
+                    "training_time_s": r["time"],
+                })
+                # Log the sklearn model
+                mlflow.sklearn.log_model(r["model"], name=f"model_{name.replace(' ', '_')}")
+                logger.debug(f"Child run logged: {name} (run_id={child_run.info.run_id[:8]}...)")
+
+        # -- Log best-model metrics on parent --
+        mlflow.log_metrics({
+            "best_test_accuracy": best["test_acc"],
+            "best_train_accuracy": best["train_acc"],
+            "best_cv_accuracy_mean": best["cv_mean"],
+            "train_test_gap": train_test_gap,
+            "train_cv_gap": train_cv_gap,
+        })
+
+        # -- Log per-class precision / recall / f1 --
+        report_dict = classification_report(y_test, y_pred, target_names=class_names, output_dict=True)
+        for cls_name, metrics in report_dict.items():
+            if isinstance(metrics, dict):
+                safe = cls_name.replace(" ", "_").replace("(", "").replace(")", "")
+                for metric_key, metric_val in metrics.items():
+                    mlflow.log_metric(f"{safe}_{metric_key}", metric_val)
+
+        # -- Log visualisation artifacts --
+        artifact_dir = os.path.join(REPORT_DIR, "mlflow_plots")
+        os.makedirs(artifact_dir, exist_ok=True)
+
+        # 1. Confusion matrix
+        fig_cm = _plot_confusion_matrix(cm, class_names, title=f"Confusion Matrix – {best_name}")
+        cm_path = os.path.join(artifact_dir, "confusion_matrix.png")
+        fig_cm.savefig(cm_path, dpi=150)
+        plt.close(fig_cm)
+        mlflow.log_artifact(cm_path, artifact_path="plots")
+
+        # 2. Model comparison chart
+        fig_cmp = _plot_model_comparison(results)
+        cmp_path = os.path.join(artifact_dir, "model_comparison.png")
+        fig_cmp.savefig(cmp_path, dpi=150)
+        plt.close(fig_cmp)
+        mlflow.log_artifact(cmp_path, artifact_path="plots")
+
+        # 3. Class distribution
+        fig_dist = _plot_class_distribution(y_test, le, title="Test-Set Class Distribution")
+        dist_path = os.path.join(artifact_dir, "class_distribution.png")
+        fig_dist.savefig(dist_path, dpi=150)
+        plt.close(fig_dist)
+        mlflow.log_artifact(dist_path, artifact_path="plots")
+
+        # 4. Feature importances (if available)
+        if hasattr(model, "feature_importances_"):
+            feat_names_all = list(tfidf.get_feature_names_out()) + list(onehot.get_feature_names_out())
+            fig_fi = _plot_feature_importances(model.feature_importances_, feat_names_all)
+            fi_path = os.path.join(artifact_dir, "feature_importances.png")
+            fig_fi.savefig(fi_path, dpi=150)
+            plt.close(fig_fi)
+            mlflow.log_artifact(fi_path, artifact_path="plots")
+
+        # 5. Log text report & model pickle as artifacts
+        mlflow.log_artifact(report_path, artifact_path="reports")
+        mlflow.log_artifact(model_path, artifact_path="model")
+
+        # -- Register the best model in the MLflow Model Registry --
+        reg_model_name = "CoverageClassifier"
+        model_uri = f"runs:/{parent_run.info.run_id}/best_model"
+        mlflow.sklearn.log_model(
+            model, name="best_model",
+            registered_model_name=reg_model_name,
+        )
+        logger.info(f"Best model registered as '{reg_model_name}' in MLflow Model Registry")
+        logger.info(f"Parent MLflow run ID: {parent_run.info.run_id}")
+        logger.info(f"MLflow Tracking URI: {mlflow.get_tracking_uri()}")
+        logger.info(f"Start UI with: mlflow ui --backend-store-uri {MLFLOW_TRACKING_URI}")
+
     return artefact
 
 
 # ─── MAIN ───────────────────────────────────────────────────────────────────
 def main():
-    print("\n" + "★" * 70)
-    print("  COVERAGE CLASSIFICATION MODEL – 5-CLASS TRAINING")
-    print("★" * 70 + "\n")
+    logger.info("=" * 70)
+    logger.info("COVERAGE CLASSIFICATION MODEL - 5-CLASS TRAINING")
+    logger.info("=" * 70)
 
     # 1. Load data
     df = load_data(DATA_PATH)
@@ -359,17 +584,17 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=y
     )
-    print(f"\n  Train size: {len(X_train)}, Test size: {len(X_test)}")
+    logger.info(f"Train/Test split: {len(X_train)} train, {len(X_test)} test")
 
     # 4. Train models
     results = train_models(X_train, y_train, X_test, y_test, le)
 
-    # 5. Select best, save model & report
-    artefact = select_and_save(results, X_test, y_test, le, tfidf, onehot)
+    # 5. Select best, save model & report  (+ MLflow logging)
+    artefact = select_and_save(results, X_train, y_train, X_test, y_test, le, tfidf, onehot)
 
-    print("\n" + "★" * 70)
-    print("  TRAINING COMPLETE")
-    print("★" * 70 + "\n")
+    logger.info("=" * 70)
+    logger.info("TRAINING PIPELINE COMPLETE")
+    logger.info("=" * 70)
     return artefact
 
 
