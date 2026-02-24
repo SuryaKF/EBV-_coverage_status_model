@@ -1,0 +1,59 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Data files (large datasets)
+data/
+
+# MLflow artifacts (use mounted volume instead)
+mlruns/
+
+# Logs
+logs/
+*.log
+
+# Test files
+tests/
+*.test.py
+*_test.py
+
+# Reports (not needed in container)
+reports/
+
+# Documentation
+*.md
+docs/
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Other unnecessary files
+*.pkl.bak
+coverage_pipeline/

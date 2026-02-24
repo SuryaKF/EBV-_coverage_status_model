@@ -1,0 +1,36 @@
+# Coverage Classification API - Docker Compose
+# =============================================
+
+version: '3.8'
+
+services:
+  coverage-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: coverage-classifier-api
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/models/coverage_model.pkl
+      - LOG_LEVEL=info
+    volumes:
+      # Mount models directory for easy model updates without rebuild
+      - ./models:/app/models:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+# Optional: Add nginx reverse proxy for production
+#  nginx:
+#    image: nginx:alpine
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+#    depends_on:
+#      - coverage-api
